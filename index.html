@@ -7,19 +7,21 @@
     <style>
         .main-heading{
             text-align: center;
-           margin-left: 150px;
+           margin-left: 170px;
         }
         .main-img {
             height: 500px;
             width: 680px;
+            margin-left: 30px;
+            border-radius: 10px;
             
         }
         .content{
             margin-left: 30px;
             border: 2px solid black;
             position: relative;
-            left: 20px;
-            border-radius: 10px;
+            left: 40px;
+            border-radius: 20px;
             padding: 10px;
         }
         .main-container{
@@ -40,7 +42,7 @@
             border-radius: 30px;
             border: none;
             color: white;
-            background-color: black;
+            background-color: rgb(51, 156, 120);
             font-size:medium;
             cursor: pointer;
         }
@@ -50,7 +52,7 @@
            position: fixed;
            top: 0;
            left: 0;
-           background-color: rgba(0, 0, 0, 0.5);
+           background-color: rgba(0, 0, 0, 0.7);
            display: none;
            justify-content: center;
            align-items: center;
@@ -80,7 +82,7 @@
             border-radius: 30px;
             border: none;
             color: white;
-            background-color: black;
+            background-color: rgb(51, 156, 120);
             font-size:medium;
             cursor: pointer;
         }
@@ -114,14 +116,14 @@
                 <li class="course-elements">PowerBI</li>
                 <li class="course-elements">Alteryx</li>
             </ul>
-            <button type="button" class="btn-enroll-now"onclick="openModal()">Enroll Now 🚀</button>
+            <button type="button" class="btn-enroll-now"onclick="openModal()">Enroll Now </button>
     </div>
     </div>
 
     <div class="overlay" id="overlay">
 
         <div class="modal">
-            <img src="./img/close.png" alt="close" class="close-icon" id="close" onclick="closeModal()">
+            <img src="./img/close-img.png" alt="close" class="close-icon" id="close" onclick="closeModal()">
             <h2 style="text-align: center;" >Enrollment Form</h2>
             <form class="form">
 
