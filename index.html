@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dialog Box Modal</title>
+    <style>
+        .main-heading{
+            text-align: center;
+           margin-left: 150px;
+        }
+        .main-img {
+            height: 500px;
+            width: 680px;
+            
+        }
+        .content{
+            margin-left: 30px;
+            border: 2px solid black;
+            position: relative;
+            left: 20px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .main-container{
+            display: flex;
+        }
+        .course{
+            margin-left: 50px ;
+        }
+        .course-elements{
+            margin-left:40px;
+            margin-top: 10px;
+        }
+        .btn-enroll-now{
+            display: block;
+            margin: 40px auto;
+            width: 180px;
+            padding: 10px;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            background-color: black;
+            font-size:medium;
+            cursor: pointer;
+        }
+        .overlay{
+           height: 100%;
+           width: 100%;
+           position: fixed;
+           top: 0;
+           left: 0;
+           background-color: rgba(0, 0, 0, 0.5);
+           display: none;
+           justify-content: center;
+           align-items: center;
+        }
+        .modal{
+            background-color: white;
+            height: 400px;
+            width: 400px;
+            padding: 20px;
+            border-radius: 20px;
+            position: relative;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            
+        }
+        .form-input{
+            margin: 10px;
+            padding: 5px;
+        }
+        .proceed-btn{
+            display: block;
+            margin: 40px auto;
+            width: 200px;
+            padding: 10px;
+            border-radius: 30px;
+            border: none;
+            color: white;
+            background-color: black;
+            font-size:medium;
+            cursor: pointer;
+        }
+        .close-icon{
+            height: 25px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main-heading">DATA  SCIENCE</h1> <br>
+    <div class="main-container">
+        <img class="main-img " src="./img/poster.webp" alt="poster">
+
+    <div class="content">
+    <h3>Data Science Learning Specification In...</h3>
+    
+    <h4 class="course">What we Exactly Teach you </h4>
+            <ul>
+                <li class="course-elements">Digital Analytics</li>
+                <li class="course-elements">Quality Analysis</li>
+                <li class="course-elements">Data Mining</li>
+                <li class="course-elements">Machine Learning</li>
+                <li class="course-elements">Business Intelligence</li>
+                <li class="course-elements">Advance Exel</li>
+                <li class="course-elements">SQL</li>
+                <li class="course-elements">Python </li>
+                <li class="course-elements">PowerBI</li>
+                <li class="course-elements">Alteryx</li>
+            </ul>
+            <button type="button" class="btn-enroll-now"onclick="openModal()">Enroll Now 🚀</button>
+    </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+
+        <div class="modal">
+            <img src="./img/close.png" alt="close" class="close-icon" id="close" onclick="closeModal()">
+            <h2 style="text-align: center;" >Enrollment Form</h2>
+            <form class="form">
+
+                <input type="text" placeholder="Enter Your Name" class="form-input">
+                <input type="email" placeholder="Enter Your Email" class="form-input">
+                <input type="number" placeholder="Enter Your Number" class="form-input">
+                <input type="text" placeholder="Enter Your College/School" class="form-input">
+                <input type="text" placeholder="Enter Your City" class="form-input">
+                <button type="submit" class="proceed-btn">Proceed to Payment</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function openModal(){
+            const overlayElement = document.getElementById('overlay');
+            overlayElement.style.display = 'flex';
+        }
+        function closeModal(){
+            const overlayElement = document.getElementById('overlay');
+            overlayElement.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
